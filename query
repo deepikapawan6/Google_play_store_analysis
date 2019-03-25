@@ -1,0 +1,32 @@
+SELECT * from google_playstore_analysis;
+
+SELECT "App", "Category"
+FROM google_playstore_analysis
+WHERE google_playstore_analysis."Rating" >= 4.0;
+
+SELECT "App", "Category"
+FROM google_playstore_analysis
+WHERE google_playstore_analysis."Rating" >= 4.0
+AND google_playstore_analysis."Reviews" > 20000;
+
+SELECT "App", "Category"
+FROM google_playstore_analysis
+WHERE google_playstore_analysis."Rating" < 3.0
+AND google_playstore_analysis."Reviews" > 20000;
+
+SELECT *
+FROM google_playstore_analysis
+WHERE google_playstore_analysis."Type" = 'Paid';
+
+SELECT *
+FROM google_playstore_analysis
+WHERE google_playstore_analysis."Content Rating" = 'Teen';
+
+SELECT *
+FROM google_playstore_analysis
+WHERE google_playstore_analysis."Content Rating" = 'Teen'
+AND google_playstore_analysis."Type" = 'Paid';
+
+
+
+
